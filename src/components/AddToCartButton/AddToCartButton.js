@@ -1,9 +1,9 @@
 import React from 'react';
 
-const AddToCartButton = () => {
+const AddToCartButton = ({cartValueUpdateHandler}) => {
     return (
         <div>
-            <button className="btn glass">AddToCart</button>
+            <button onClick={()=>cartValueUpdateHandler()} className="btn glass">AddToCart</button>
         </div>
     );
 };

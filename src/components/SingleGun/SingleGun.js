@@ -2,7 +2,7 @@ import React from 'react';
 import AddToCartButton from '../AddToCartButton/AddToCartButton';
 import DetailsButton from '../DetailsButton/DetailsButton';
 
-const SingleGun = ({gun:{name,img,bullet,action,price}}) => {
+const SingleGun = ({gun:{name,img,bullet,action,price},cartValueUpdateHandler}) => {
     return (
         <div>
             
@@ -13,7 +13,7 @@ const SingleGun = ({gun:{name,img,bullet,action,price}}) => {
                     <p className='text-left'><strong className='text-xl text-gray-200'>Bullet:{bullet}</strong> </p>
                     <p className='text-left'><strong className='text-xl text-yellow-200'>Price:{price}</strong> </p>
                     <DetailsButton></DetailsButton>
-                    <AddToCartButton></AddToCartButton>
+                    <AddToCartButton cartValueUpdateHandler={cartValueUpdateHandler}></AddToCartButton>
                 </div>
                 <figure className='w-full'><img className='w-full' src={img} alt="Shoes" /></figure>
             </div>

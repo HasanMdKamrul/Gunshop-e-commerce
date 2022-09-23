@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import SingleGun from '../SingleGun/SingleGun';
 
-const Allguns = () => {
+const Allguns = ({cartValueUpdateHandler}) => {
     const [guns,setGuns] = useState([]);
 
     useEffect(()=>{
@@ -26,7 +26,7 @@ const Allguns = () => {
             <h1 className='text-4xl text-blue-500 my-5'>Welcome To Our Fake Gun Shop</h1>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
                 {
-                    guns?.map(gun=><SingleGun gun={gun} key={gun.id}></SingleGun>)
+                    guns?.map(gun=><SingleGun cartValueUpdateHandler={cartValueUpdateHandler} gun={gun} key={gun.id}></SingleGun>)
                 }
             </div>
         </div>
