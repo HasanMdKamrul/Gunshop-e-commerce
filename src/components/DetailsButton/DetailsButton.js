@@ -1,9 +1,10 @@
 import React from 'react';
 
-const DetailsButton = () => {
+const DetailsButton = ({detailHandler}) => {
+   
     return (
         <div>
-            <button className="btn btn-outline btn-success">Details</button>
+            <label onClick={()=>detailHandler()}  htmlFor="my-modal" className="btn btn-outline btn-success">Details</label>
         </div>
     );
 };
