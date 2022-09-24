@@ -1,11 +1,7 @@
 import React from 'react';
 
-const Modal = ({modalData,setModalData}) => {
-
-    console.log(modalData)
-
-    const {name} = modalData;
-    console.log(name)
+const Modal = ({modalData,setModalData}) => { 
+    
    
     return (
         <div>
